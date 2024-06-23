@@ -1,0 +1,22 @@
+/===============================================================
+/ 3D Scene Information file X:\objects\others\argon_gate_scene.bod
+/ Automatically generated from X:\objects\others\argon_gate_scene.max
+/===============================================================
+/ EGOSOFT Bodyfile exporter version 3.44 [Sep  7 2005 17:19:29]
+VER: 3;
+/ >> Mon Oct 03 17:02:01 2005
+
+/ >> Mon Oct 03 17:02:01 2005
+
+/ Animation time interval: 0..96000
+/ >> Mon Oct 03 17:02:01 2005
+ / Staring Biped Key Reading/ >> Mon Oct 03 17:02:01 2005
+ / finished Biped Key Reading
+/     Mon Oct 03 17:02:01 2005
+/     Node Bothers\argon_gate Class [Editable Mesh, GEOMOBJECT_CLASS_ID]
+P 0; B others\argon_gate; N Bothers\argon_gate; b
+  { 0x2002;  209; -2632; 2136;  0.000000; 0.000000; 0.000000; 0.000000;  -1;  -1; } // -1
+/     Mon Oct 03 17:02:01 2005
+/     Node Bothers\argon_gate_effect Class [Editable Poly, GEOMOBJECT_CLASS_ID]
+P 1; B others\argon_gate_effect; N Bothers\argon_gate_effect; b
+  { 0x2002;  0; 0; 49802;  0.000000; 0.000000; 0.000000; 0.000000;  -1;  -1; } // -1

@@ -1,0 +1,19 @@
+/===============================================================
+/ 3D Scene Information file C:\Documents and Settings\Bobby\Desktop\Next Update\objects\others\terran_catapult_gate_scene.bod
+/ Automatically generated from D:\Max Scenes\[CURRENT]\USC\terran_catapult_gate_scene.max
+/===============================================================
+/ EGOSOFT Bodyfile exporter version 3.53 [Jul 31 2007 12:17:29]
+VER: 3;
+/ >> Mon Jun 09 12:27:57 2008
+
+/ >> Mon Jun 09 12:27:57 2008
+
+/ Animation time interval: 0..16000
+/ >> Mon Jun 09 12:27:57 2008
+ / Staring Biped Key Reading/ >> Mon Jun 09 12:27:57 2008
+ / finished Biped Key Reading
+/     Mon Jun 09 12:27:57 2008
+/     Node Bothers\terran_catapult_gate Class [Editable Poly, GEOMOBJECT_CLASS_ID]
+P 0; B others\terran_catapult_gate; N Bothers\terran_catapult_gate; b
+  { 0x2002;  0; 0; 1793560;  0.000000; 0.000000; 0.000000; 0.000000;  3333;  1; } // 1
+  { 0x2002;  0; 0; 1793560;  0.000000; 0.000000; 0.000000; 0.000000;  -1;  -1; } // -1
