@@ -267,20 +267,24 @@
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<var>[THIS]</var>
+			<var>[PLAYERSHIP]</var>
 			<text>-&gt;</text>
 			<text> </text>
 			<text>call</text>
 			<text> </text>
 			<text>script</text>
 			<text> </text>
-			<call>tv.get.sector.random</call>
-			<text> </text>
+			<call>tv.get.random.sector</call>
 			<text>:</text>
+			<text> </text>
+			<text>max.jumps</text>
+			<text>=</text>
+			<var>-1</var>
 			<text> </text>
 			<text>known.only</text>
 			<text>=</text>
 			<var>[FALSE]</var>
+			<text> </text>
 		</line>
 		<line linenr="054" indent="&#160;">
 			<var>$sat</var>
@@ -836,7 +840,7 @@
 			<text> </text>
 			<text>script</text>
 			<text> </text>
-			<call>tv.get.array.randomized</call>
+			<call>tv.get.random.array</call>
 			<text> </text>
 			<text>:</text>
 			<text> </text>
@@ -1557,7 +1561,7 @@
 			<text> </text>
 			<text>script</text>
 			<text> </text>
-			<call>tv.get.array.element.random</call>
+			<call>tv.get.random.array.element</call>
 			<text> </text>
 			<text>:</text>
 			<text> </text>
@@ -1815,7 +1819,7 @@
 			<text> </text>
 			<text>script</text>
 			<text> </text>
-			<call>tv.get.array.element.random</call>
+			<call>tv.get.random.array.element</call>
 			<text> </text>
 			<text>:</text>
 			<text> </text>
@@ -2155,7 +2159,7 @@
 			<text> </text>
 			<text>script</text>
 			<text> </text>
-			<call>tv.get.array.randomized</call>
+			<call>tv.get.random.array</call>
 			<text> </text>
 			<text>:</text>
 			<text> </text>
@@ -2264,11 +2268,11 @@
 			<text> </text>
 			<text>:</text>
 			<text> </text>
-			<text>argument1</text>
+			<text>victim</text>
 			<text>=</text>
 			<var>$flagship.opponent</var>
 			<text> </text>
-			<text>argument2</text>
+			<text>nofollowsec</text>
 			<text>=</text>
 			<var>0</var>
 		</line>
@@ -3000,13 +3004,15 @@
 					<sval type="int" val="101" />
 					<sval type="string" val="SetupVariables" />
 				</sval>
-				<sval type="array" size="8">
+				<sval type="array" size="10">
 					<sval type="int" val="102" />
-					<sval type="string" val="tv.get.sector.random" />
+					<sval type="string" val="tv.get.random.sector" />
 					<sval type="int" val="21" />
 					<sval type="int" val="131075" />
-					<sval type="int" val="1" />
-					<sval type="int" val="1" />
+					<sval type="int" val="3" />
+					<sval type="int" val="2" />
+					<sval type="int" val="4" />
+					<sval type="int" val="-1" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="9" />
 				</sval>
@@ -3421,7 +3427,7 @@
 				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
-					<sval type="string" val="tv.get.array.randomized" />
+					<sval type="string" val="tv.get.random.array" />
 					<sval type="int" val="31" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />
@@ -3981,7 +3987,7 @@
 				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
-					<sval type="string" val="tv.get.array.element.random" />
+					<sval type="string" val="tv.get.random.array.element" />
 					<sval type="int" val="44" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />
@@ -4142,7 +4148,7 @@
 				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
-					<sval type="string" val="tv.get.array.element.random" />
+					<sval type="string" val="tv.get.random.array.element" />
 					<sval type="int" val="44" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />
@@ -4338,7 +4344,7 @@
 				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
-					<sval type="string" val="tv.get.array.randomized" />
+					<sval type="string" val="tv.get.random.array" />
 					<sval type="int" val="27" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />

@@ -186,7 +186,7 @@
 			<text> </text>
 			<text>script</text>
 			<text> </text>
-			<call>tv.get.array.element.random</call>
+			<call>tv.get.random.array.element</call>
 			<text> </text>
 			<text>:</text>
 			<text> </text>
@@ -372,6 +372,7 @@
 			<text>script</text>
 			<text> </text>
 			<call>tv.set.task.killenemiesland</call>
+			<text> </text>
 			<text>:</text>
 			<text> </text>
 			<text>object</text>
@@ -389,7 +390,6 @@
 			<text>noidle</text>
 			<text>=</text>
 			<var>1</var>
-			<text> </text>
 		</line>
 		<line linenr="038" indent="&#160;">
 			<text>end</text>
@@ -551,7 +551,7 @@
 				</sval>
 				<sval type="array" size="8">
 					<sval type="int" val="102" />
-					<sval type="string" val="tv.get.array.element.random" />
+					<sval type="string" val="tv.get.random.array.element" />
 					<sval type="int" val="13" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />

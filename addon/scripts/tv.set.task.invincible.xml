@@ -9,6 +9,13 @@
 	<arguments />
 	<sourcetext>
 		<line linenr="001" indent="">
+			<comment>* This checks if a script is running on a task</comment>
+		</line>
+		<line linenr="002" indent="">
+			<comment>* if not, then begin a new task with that script.</comment>
+		</line>
+		<line linenr="003" indent="" />
+		<line linenr="004" indent="">
 			<var>$isRunning</var>
 			<text> </text>
 			<text>=</text>
@@ -32,15 +39,15 @@
 			<text>=</text>
 			<var>12004</var>
 		</line>
-		<line linenr="002" indent="" />
-		<line linenr="003" indent="">
+		<line linenr="005" indent="" />
+		<line linenr="006" indent="">
 			<text>skip</text>
 			<text> </text>
 			<text>if</text>
 			<text> </text>
 			<var>$isRunning</var>
 		</line>
-		<line linenr="004" indent="&#160;">
+		<line linenr="007" indent="&#160;">
 			<var>[THIS]</var>
 			<text>-&gt;</text>
 			<text> </text>
@@ -83,13 +90,13 @@
 			<text>=</text>
 			<var>null</var>
 		</line>
-		<line linenr="005" indent="" />
-		<line linenr="006" indent="">
+		<line linenr="008" indent="" />
+		<line linenr="009" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="007" indent="" />
+		<line linenr="010" indent="" />
 	</sourcetext>
 	<codearray>
 		<sval type="array" size="10">
@@ -147,7 +154,21 @@
 				</sval>
 			</sval>
 			<sval type="int" val="0" />
-			<sval type="array" size="3">
+			<sval type="array" size="6">
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="This checks if a script is running on a task" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="if not, then begin a new task with that script." />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="1" />
 					<sval type="int" val="2" />

@@ -8,7 +8,14 @@
 	<description></description>
 	<arguments />
 	<sourcetext>
-		<line linenr="001" indent="" interruptable="@">
+		<line linenr="001" indent="">
+			<comment>* setup.ANY_SCRIPT must do minimal logic or else it won't work correctly with the x3 engine!</comment>
+		</line>
+		<line linenr="002" indent="">
+			<comment>* STARTING a new script on null containing logic is your best bet at avoiding issues</comment>
+		</line>
+		<line linenr="003" indent="" />
+		<line linenr="004" indent="" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>null</var>
@@ -22,13 +29,13 @@
 			<text> </text>
 			<text>:</text>
 		</line>
-		<line linenr="002" indent="" />
-		<line linenr="003" indent="">
+		<line linenr="005" indent="" />
+		<line linenr="006" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="004" indent="" />
+		<line linenr="007" indent="" />
 	</sourcetext>
 	<codearray>
 		<sval type="array" size="10">
@@ -54,7 +61,21 @@
 				</sval>
 			</sval>
 			<sval type="int" val="0" />
-			<sval type="array" size="2">
+			<sval type="array" size="5">
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="setup.ANY_SCRIPT must do minimal logic or else it won't work correctly with the x3 engine!" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="string" val="STARTING a new script on null containing logic is your best bet at avoiding issues" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="1" />
 					<sval type="int" val="2" />

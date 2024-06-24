@@ -2,7 +2,7 @@
 <?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
 <!-- Generated using X-Studio -->
 <script>
-	<name>tv.get.array.element.random</name>
+	<name>tv.get.random.array.element</name>
 	<version>1</version>
 	<engineversion>50</engineversion>
 	<description></description>
@@ -14,7 +14,7 @@
 			<comment>* ************************************************</comment>
 		</line>
 		<line linenr="002" indent="">
-			<comment>* SCRIPT NAME: tv.get.array.element.random.xml</comment>
+			<comment>* SCRIPT NAME: tv.get.random.array.element.xml</comment>
 		</line>
 		<line linenr="003" indent="">
 			<comment>* DESCRIPTION: Takes in an array and returns an</comment>
@@ -121,7 +121,7 @@
 	</sourcetext>
 	<codearray>
 		<sval type="array" size="10">
-			<sval type="string" val="tv.get.array.element.random" />
+			<sval type="string" val="tv.get.random.array.element" />
 			<sval type="int" val="50" />
 			<sval type="string" val="" />
 			<sval type="int" val="1" />
@@ -214,7 +214,7 @@
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
 					<sval type="int" val="1" />
-					<sval type="string" val="SCRIPT NAME: tv.get.array.element.random.xml" />
+					<sval type="string" val="SCRIPT NAME: tv.get.random.array.element.xml" />
 				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
