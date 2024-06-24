@@ -13,8 +13,14 @@
     <ship typename="SS_SH_A_M5"/>
   </gamestart>
 
-  <gamestart id="203" name="WIP" description="" difficulty="" image="" plot="0">
-    <player name="WIP" species="" gender="" age=""/>
+  <gamestart id="203" name="Jump Beacons" description="" difficulty="" image="" plot="0">
+    <player name="Jump Beacons" species="" gender="" age=""/>
+    <sector x="5" y="7"/>
+    <ship typename="SS_SH_A_M5"/>
+  </gamestart>
+
+  <gamestart id="204" name="Gates" description="" difficulty="" image="" plot="0">
+    <player name="Gates" species="" gender="" age=""/>
     <sector x="5" y="7"/>
     <ship typename="SS_SH_A_M5"/>
   </gamestart>
