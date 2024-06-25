@@ -372,7 +372,9 @@
 			<var>$beacon.table</var>
 			<text> </text>
 			<text>(</text>
+			<text> </text>
 			<var>$sector0</var>
+			<text> </text>
 			<text>)</text>
 			<text> </text>
 			<text>=</text>
@@ -400,7 +402,9 @@
 			<var>$beacon.table</var>
 			<text> </text>
 			<text>(</text>
+			<text> </text>
 			<var>$sector1</var>
+			<text> </text>
 			<text>)</text>
 			<text> </text>
 			<text>=</text>

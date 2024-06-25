@@ -237,6 +237,7 @@
 			<text>script</text>
 			<text> </text>
 			<call>tv.get.sectors</call>
+			<text> </text>
 			<text>:</text>
 			<text> </text>
 			<text>max.jumps</text>
@@ -246,7 +247,6 @@
 			<text>only.known</text>
 			<text>=</text>
 			<var>[FALSE]</var>
-			<text> </text>
 		</line>
 		<line linenr="031" indent="&#160;">
 			<var>$XS.Iterator1</var>
@@ -291,8 +291,6 @@
 			<text>alloc</text>
 		</line>
 		<line linenr="036" indent="&#160;">
-			<text>=</text>
-			<text> </text>
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -309,7 +307,7 @@
 			<text> </text>
 			<var>$table</var>
 		</line>
-		<line linenr="037" indent="">
+		<line linenr="037" indent="&#160;">
 			<text>end</text>
 		</line>
 		<line linenr="038" indent="" />
@@ -331,13 +329,30 @@
 			<var>$sectors</var>
 		</line>
 		<line linenr="040" indent="">
+			<var>$sectors</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<var>$globals</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'tv.sectors'</text>
+			<text> </text>
+			<text>)</text>
+		</line>
+		<line linenr="041" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="041" indent="" />
-		<line linenr="042" indent="&#160;">
+		<line linenr="042" indent="" />
+		<line linenr="043" indent="&#160;">
 			<comment>* Initialize beacons</comment>
 		</line>
-		<line linenr="043" indent="&#160;">
+		<line linenr="044" indent="&#160;">
 			<var>$sectors.keys</var>
 			<text> </text>
 			<text>=</text>
@@ -353,9 +368,8 @@
 			<text>=</text>
 			<text> </text>
 			<var>$sectors</var>
-			<text> </text>
 		</line>
-		<line linenr="044" indent="&#160;">
+		<line linenr="045" indent="&#160;">
 			<var>$XS.Iterator2</var>
 			<text> </text>
 			<text>=</text>
@@ -368,17 +382,17 @@
 			<text> </text>
 			<var>$sectors.keys</var>
 		</line>
-		<line linenr="045" indent="&#160;&#160;">
+		<line linenr="046" indent="&#160;&#160;">
 			<text>while</text>
 			<text> </text>
 			<var>$XS.Iterator2</var>
 		</line>
-		<line linenr="046" indent="&#160;">
+		<line linenr="047" indent="&#160;">
 			<text>dec</text>
 			<text> </text>
 			<var>$XS.Iterator2</var>
 		</line>
-		<line linenr="047" indent="">
+		<line linenr="048" indent="">
 			<var>$sector.key</var>
 			<text> </text>
 			<text>=</text>
@@ -388,7 +402,7 @@
 			<var>$XS.Iterator2</var>
 			<text>]</text>
 		</line>
-		<line linenr="048" indent="">
+		<line linenr="049" indent="">
 			<var>$sector.value</var>
 			<text> </text>
 			<text>=</text>
@@ -405,7 +419,7 @@
 			<text> </text>
 			<text>)</text>
 		</line>
-		<line linenr="049" indent="">
+		<line linenr="050" indent="">
 			<var>$beacons</var>
 			<text> </text>
 			<text>=</text>
@@ -422,14 +436,14 @@
 			<text> </text>
 			<text>)</text>
 		</line>
-		<line linenr="050" indent="">
+		<line linenr="051" indent="">
 			<text>skip</text>
 			<text> </text>
 			<text>if</text>
 			<text> </text>
 			<var>$beacons</var>
 		</line>
-		<line linenr="051" indent="">
+		<line linenr="052" indent="">
 			<var>$beacons</var>
 			<text> </text>
 			<text>=</text>
@@ -438,7 +452,7 @@
 			<text> </text>
 			<text>alloc</text>
 		</line>
-		<line linenr="052" indent="">
+		<line linenr="053" indent="&#160;">
 			<text>table</text>
 			<text> </text>
 			<text>set</text>
@@ -455,11 +469,287 @@
 			<text> </text>
 			<var>$beacons</var>
 		</line>
-		<line linenr="053" indent="">
+		<line linenr="054" indent="&#160;">
 			<text>end</text>
 		</line>
-		<line linenr="054" indent="" />
-		<line linenr="055" indent="">
+		<line linenr="055" indent="&#160;" />
+		<line linenr="056" indent="&#160;">
+			<comment>* Initialize gates</comment>
+		</line>
+		<line linenr="057" indent="&#160;">
+			<var>$sectors.keys</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>keys</text>
+			<text>:</text>
+			<text> </text>
+			<text>table</text>
+			<text>=</text>
+			<text> </text>
+			<var>$sectors</var>
+		</line>
+		<line linenr="058" indent="&#160;">
+			<var>$XS.Iterator3</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$sectors.keys</var>
+		</line>
+		<line linenr="059" indent="&#160;&#160;">
+			<text>while</text>
+			<text> </text>
+			<var>$XS.Iterator3</var>
+		</line>
+		<line linenr="060" indent="&#160;&#160;">
+			<text>dec</text>
+			<text> </text>
+			<var>$XS.Iterator3</var>
+		</line>
+		<line linenr="061" indent="&#160;&#160;">
+			<var>$sector.key</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$sectors.keys</var>
+			<text>[</text>
+			<var>$XS.Iterator3</var>
+			<text>]</text>
+		</line>
+		<line linenr="062" indent="&#160;&#160;">
+			<var>$sector.value</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<var>$sectors</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<var>$sector.key</var>
+			<text> </text>
+			<text>)</text>
+		</line>
+		<line linenr="063" indent="&#160;&#160;">
+			<var>$gates</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>alloc</text>
+		</line>
+		<line linenr="064" indent="&#160;&#160;" interruptable="@">
+			<var>$int.max</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>tv.get.int.max</call>
+			<text> </text>
+			<text>:</text>
+		</line>
+		<line linenr="065" indent="&#160;">
+			<var>$gates.found</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>find</text>
+			<text> </text>
+			<text>gate</text>
+			<text>:</text>
+			<text> </text>
+			<text>flags</text>
+			<text>=</text>
+			<var>[Find.Multiple]</var>
+			<text>,</text>
+			<text> </text>
+			<text>refobj</text>
+			<text>=</text>
+			<var>$sector.key</var>
+			<text>,</text>
+			<text> </text>
+			<text>max</text>
+			<text> </text>
+			<text>dist</text>
+			<text>=</text>
+			<var>$int.max</var>
+			<text>,</text>
+			<text> </text>
+			<text>refpos</text>
+			<text>=</text>
+			<var>null</var>
+		</line>
+		<line linenr="066" indent="&#160;" />
+		<line linenr="067" indent="&#160;">
+			<var>$XS.Iterator4</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>size</text>
+			<text> </text>
+			<text>of</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$gates.found</var>
+		</line>
+		<line linenr="068" indent="">
+			<text>while</text>
+			<text> </text>
+			<var>$XS.Iterator4</var>
+		</line>
+		<line linenr="069" indent="">
+			<text>dec</text>
+			<text> </text>
+			<var>$XS.Iterator4</var>
+		</line>
+		<line linenr="070" indent="">
+			<var>$gate.found</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$gates.found</var>
+			<text>[</text>
+			<var>$XS.Iterator4</var>
+			<text>]</text>
+		</line>
+		<line linenr="071" indent="">
+			<var>$gate.found.id</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$gate.found</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>gate</text>
+			<text> </text>
+			<text>id</text>
+		</line>
+		<line linenr="072" indent="" interruptable="@">
+			<var>$gate.found.uuid</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>tv.get.random.uuid</call>
+			<text>:</text>
+			<text> </text>
+		</line>
+		<line linenr="073" indent="">
+			<var>$gate.found.info</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>alloc</text>
+		</line>
+		<line linenr="074" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$gate.found.info</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'tv.gate.id'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$gate.found.id</var>
+		</line>
+		<line linenr="075" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$gate.found.info</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'tv.gate.sector'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$sector.key</var>
+			<text> </text>
+		</line>
+		<line linenr="076" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$gates</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<var>$gate.found.uuid</var>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$gate.found.info</var>
+		</line>
+		<line linenr="077" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="078" indent="" />
+		<line linenr="079" indent="">
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$sector.value</var>
+			<text> </text>
+			<text>(</text>
+			<text> </text>
+			<text>'tv.gates'</text>
+			<text> </text>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$gates</var>
+		</line>
+		<line linenr="080" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="081" indent="" />
+		<line linenr="082" indent="">
 			<text>set</text>
 			<text> </text>
 			<text>global</text>
@@ -475,13 +765,13 @@
 			<text>=</text>
 			<var>$globals</var>
 		</line>
-		<line linenr="056" indent="" />
-		<line linenr="057" indent="">
+		<line linenr="083" indent="" />
+		<line linenr="084" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>$globals</var>
 		</line>
-		<line linenr="058" indent="" />
+		<line linenr="085" indent="" />
 	</sourcetext>
 	<codearray>
 		<sval type="array" size="10">
@@ -490,7 +780,7 @@
 			<sval type="string" val="" />
 			<sval type="int" val="1" />
 			<sval type="int" val="0" />
-			<sval type="array" size="12">
+			<sval type="array" size="21">
 				<sval type="string" val="globals" />
 				<sval type="string" val="value" />
 				<sval type="string" val="sectors" />
@@ -503,8 +793,17 @@
 				<sval type="string" val="XS.Iterator2" />
 				<sval type="string" val="sector.value" />
 				<sval type="string" val="beacons" />
+				<sval type="string" val="XS.Iterator3" />
+				<sval type="string" val="gates" />
+				<sval type="string" val="int.max" />
+				<sval type="string" val="gates.found" />
+				<sval type="string" val="gate.found" />
+				<sval type="string" val="XS.Iterator4" />
+				<sval type="string" val="gate.found.id" />
+				<sval type="string" val="gate.found.uuid" />
+				<sval type="string" val="gate.found.info" />
 			</sval>
-			<sval type="array" size="37">
+			<sval type="array" size="60">
 				<sval type="array" size="4">
 					<sval type="int" val="158" />
 					<sval type="int" val="5" />
@@ -612,7 +911,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-536864764" />
+					<sval type="int" val="-536864508" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="2" />
@@ -688,6 +987,14 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="2" />
 				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="1709" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="5" />
+					<sval type="string" val="tv.sectors" />
+				</sval>
 				<sval type="array" size="4">
 					<sval type="int" val="1710" />
 					<sval type="int" val="7" />
@@ -702,7 +1009,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-1610603767" />
+					<sval type="int" val="-1610603511" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="9" />
@@ -739,7 +1046,7 @@
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-536862457" />
+					<sval type="int" val="-536862201" />
 					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="11" />
@@ -761,7 +1068,161 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="26" />
+					<sval type="int" val="27" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="1710" />
+					<sval type="int" val="7" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="12" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610597879" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="12" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="7" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="12" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="1709" />
+					<sval type="int" val="10" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1706" />
+					<sval type="int" val="13" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="tv.get.int.max" />
+					<sval type="int" val="14" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="1336" />
+					<sval type="int" val="15" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="111" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="14" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="131" />
+					<sval type="int" val="17" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="15" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610598391" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="143" />
+					<sval type="int" val="17" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="16" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="15" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="17" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="1058" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="16" />
+					<sval type="int" val="18" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="tv.get.random.uuid" />
+					<sval type="int" val="19" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="0" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="1706" />
+					<sval type="int" val="20" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="20" />
+					<sval type="int" val="5" />
+					<sval type="string" val="tv.gate.id" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="18" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="20" />
+					<sval type="int" val="5" />
+					<sval type="string" val="tv.gate.sector" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="8" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="19" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="20" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="46" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="1708" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="10" />
+					<sval type="int" val="5" />
+					<sval type="string" val="tv.gates" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="13" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="38" />
 				</sval>
 				<sval type="array" size="5">
 					<sval type="int" val="157" />
@@ -777,7 +1238,7 @@
 				</sval>
 			</sval>
 			<sval type="int" val="0" />
-			<sval type="array" size="23">
+			<sval type="array" size="29">
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
 					<sval type="int" val="1" />
@@ -850,32 +1311,57 @@
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="24" />
+					<sval type="int" val="25" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="24" />
+					<sval type="int" val="25" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="3">
-					<sval type="int" val="24" />
+					<sval type="int" val="25" />
 					<sval type="int" val="1" />
 					<sval type="string" val="Initialize beacons" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="35" />
+					<sval type="int" val="36" />
 					<sval type="int" val="4" />
-				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="35" />
-					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="36" />
 					<sval type="int" val="2" />
 				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="36" />
+					<sval type="int" val="1" />
+					<sval type="string" val="Initialize gates" />
+				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="37" />
+					<sval type="int" val="45" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="56" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="56" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="58" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="58" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="59" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="60" />
 					<sval type="int" val="2" />
 				</sval>
 			</sval>
