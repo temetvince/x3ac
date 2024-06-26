@@ -71,6 +71,7 @@
 			<text>script</text>
 			<text> </text>
 			<call>tv.set.global.init</call>
+			<text> </text>
 			<text>:</text>
 		</line>
 		<line linenr="014" indent="" />
@@ -78,9 +79,11 @@
 			<comment>* If already initialized, avoid running anything after this again</comment>
 		</line>
 		<line linenr="016" indent="" interruptable="@">
-			<text>do</text>
+			<text>skip</text>
 			<text> </text>
 			<text>if</text>
+			<text> </text>
+			<text>not</text>
 			<text> </text>
 			<var>[THIS]</var>
 			<text>-&gt;</text>
@@ -117,6 +120,7 @@
 			<text>script</text>
 			<text> </text>
 			<call>tv.set.global</call>
+			<text> </text>
 			<text>:</text>
 			<text> </text>
 			<text>name</text>
@@ -127,9 +131,7 @@
 			<text>=</text>
 			<var>[TRUE]</var>
 		</line>
-		<line linenr="021" indent="">
-			<text> </text>
-		</line>
+		<line linenr="021" indent="" />
 		<line linenr="022" indent="">
 			<comment>* START the main tv monitor which runs some tv features</comment>
 		</line>
@@ -187,57 +189,8 @@
 		</line>
 		<line linenr="029" indent="">
 			<text>else</text>
-			<text> </text>
-			<text>if</text>
-			<text> </text>
-			<var>$name</var>
-			<text> </text>
-			<text>==</text>
-			<text> </text>
-			<text>'Machine race'</text>
 		</line>
 		<line linenr="030" indent="&#160;" interruptable="@">
-			<text>START</text>
-			<text> </text>
-			<var>null</var>
-			<text>-&gt;</text>
-			<text> </text>
-			<text>call</text>
-			<text> </text>
-			<text>script</text>
-			<text> </text>
-			<call>tv.monitor.gamestart.machinerace</call>
-			<text> </text>
-			<text>:</text>
-		</line>
-		<line linenr="031" indent="">
-			<text>else</text>
-			<text> </text>
-			<text>if</text>
-			<text> </text>
-			<var>$name</var>
-			<text> </text>
-			<text>==</text>
-			<text> </text>
-			<text>'Jump Beacons'</text>
-		</line>
-		<line linenr="032" indent="&#160;" interruptable="@">
-			<text>START</text>
-			<text> </text>
-			<var>null</var>
-			<text>-&gt;</text>
-			<text> </text>
-			<text>call</text>
-			<text> </text>
-			<text>script</text>
-			<text> </text>
-			<call>tv.monitor.gamestart.jumpbeacons</call>
-			<text>:</text>
-		</line>
-		<line linenr="033" indent="">
-			<text>else</text>
-		</line>
-		<line linenr="034" indent="&#160;" interruptable="@">
 			<text>START</text>
 			<text> </text>
 			<var>null</var>
@@ -251,16 +204,16 @@
 			<text> </text>
 			<text>:</text>
 		</line>
-		<line linenr="035" indent="">
+		<line linenr="031" indent="">
 			<text>end</text>
 		</line>
-		<line linenr="036" indent="" />
-		<line linenr="037" indent="">
+		<line linenr="032" indent="" />
+		<line linenr="033" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="038" indent="" />
+		<line linenr="034" indent="" />
 	</sourcetext>
 	<codearray>
 		<sval type="array" size="10">
@@ -272,7 +225,7 @@
 			<sval type="array" size="1">
 				<sval type="string" val="name" />
 			</sval>
-			<sval type="array" size="20">
+			<sval type="array" size="14">
 				<sval type="array" size="6">
 					<sval type="int" val="102" />
 					<sval type="string" val="tv.get.player.sector" />
@@ -364,61 +317,7 @@
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="112" />
-					<sval type="int" val="19" />
-				</sval>
-				<sval type="array" size="13">
-					<sval type="int" val="104" />
-					<sval type="int" val="-1610608891" />
-					<sval type="int" val="3" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Machine race" />
-					<sval type="int" val="15" />
-					<sval type="int" val="0" />
-					<sval type="int" val="3" />
-					<sval type="int" val="-1" />
-					<sval type="int" val="0" />
-					<sval type="int" val="-2" />
-				</sval>
-				<sval type="array" size="6">
-					<sval type="int" val="102" />
-					<sval type="string" val="tv.monitor.gamestart.machinerace" />
-					<sval type="int" val="-2147483646" />
-					<sval type="int" val="0" />
-					<sval type="int" val="0" />
-					<sval type="int" val="0" />
-				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="112" />
-					<sval type="int" val="19" />
-				</sval>
-				<sval type="array" size="13">
-					<sval type="int" val="104" />
-					<sval type="int" val="-1610608123" />
-					<sval type="int" val="3" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="5" />
-					<sval type="string" val="Jump Beacons" />
-					<sval type="int" val="15" />
-					<sval type="int" val="0" />
-					<sval type="int" val="3" />
-					<sval type="int" val="-1" />
-					<sval type="int" val="0" />
-					<sval type="int" val="-2" />
-				</sval>
-				<sval type="array" size="6">
-					<sval type="int" val="102" />
-					<sval type="string" val="tv.monitor.gamestart.jumpbeacons" />
-					<sval type="int" val="-2147483646" />
-					<sval type="int" val="0" />
-					<sval type="int" val="0" />
-					<sval type="int" val="0" />
-				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="112" />
-					<sval type="int" val="19" />
+					<sval type="int" val="13" />
 				</sval>
 				<sval type="array" size="6">
 					<sval type="int" val="102" />
@@ -514,19 +413,19 @@
 					<sval type="string" val="Load startup scenario" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="18" />
+					<sval type="int" val="12" />
 					<sval type="int" val="5" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="19" />
+					<sval type="int" val="13" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="19" />
+					<sval type="int" val="13" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="20" />
+					<sval type="int" val="14" />
 					<sval type="int" val="2" />
 				</sval>
 			</sval>
