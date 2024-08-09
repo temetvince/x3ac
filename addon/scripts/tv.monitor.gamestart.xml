@@ -1462,7 +1462,7 @@
 			<text> </text>
 			<text>(</text>
 			<text> </text>
-			<text>'tv.countdown'</text>
+			<text>'tv.gre'</text>
 			<text> </text>
 			<text>)</text>
 			<text> </text>
@@ -3696,7 +3696,7 @@
 					<sval type="int" val="131074" />
 					<sval type="int" val="9" />
 					<sval type="int" val="5" />
-					<sval type="string" val="tv.countdown" />
+					<sval type="string" val="tv.gre" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="8" />
 				</sval>
