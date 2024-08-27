@@ -1,3 +1,3 @@
-# X3AC - X3: The Alaankwa Corsairs
+# X3AC - X3: The Autarch Celestia
 
 ## This is a Work in Progress 
