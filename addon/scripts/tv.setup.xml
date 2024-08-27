@@ -25,7 +25,7 @@
 			<text> </text>
 			<text>script</text>
 			<text> </text>
-			<call>tv.get.player.sector</call>
+			<call>tv.get.sector.player</call>
 			<text> </text>
 			<text>:</text>
 		</line>
@@ -79,11 +79,9 @@
 			<comment>* If already initialized, avoid running anything after this again</comment>
 		</line>
 		<line linenr="016" indent="" interruptable="@">
-			<text>skip</text>
+			<text>do</text>
 			<text> </text>
 			<text>if</text>
-			<text> </text>
-			<text>not</text>
 			<text> </text>
 			<var>[THIS]</var>
 			<text>-&gt;</text>
@@ -228,7 +226,7 @@
 			<sval type="array" size="14">
 				<sval type="array" size="6">
 					<sval type="int" val="102" />
-					<sval type="string" val="tv.get.player.sector" />
+					<sval type="string" val="tv.get.sector.player" />
 					<sval type="int" val="-2147483647" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />

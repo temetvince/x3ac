@@ -2,18 +2,31 @@
 <?xml-stylesheet href="x2script.xsl" type="text/xsl"?>
 <!-- Generated using X-Studio -->
 <script>
-	<name>tv.get.global.tasks</name>
+	<name>tv.cmd.move.range.scanner</name>
 	<version>1</version>
 	<engineversion>50</engineversion>
 	<description></description>
-	<arguments />
+	<arguments>
+		<argument index="1" name="target" type="Var/Ship/Station" desc="" />
+	</arguments>
 	<sourcetext>
 		<line linenr="001" indent="">
-			<comment>* Returns the contents pointed to by 'tv.tasks'.</comment>
+			<var>$range.scanner</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<text>scanner</text>
+			<text> </text>
+			<text>range</text>
 		</line>
 		<line linenr="002" indent="" />
 		<line linenr="003" indent="" interruptable="@">
-			<var>$return</var>
+			<var>$status</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
@@ -24,66 +37,80 @@
 			<text> </text>
 			<text>script</text>
 			<text> </text>
-			<call>tv.get.global</call>
+			<call>tv.cmd.move.range</call>
 			<text> </text>
 			<text>:</text>
 			<text> </text>
-			<text>name</text>
+			<text>target</text>
 			<text>=</text>
-			<text>'tv.tasks'</text>
+			<var>$target</var>
+			<text> </text>
+			<text>precision</text>
+			<text>=</text>
+			<var>$range.scanner</var>
 		</line>
 		<line linenr="004" indent="" />
 		<line linenr="005" indent="">
 			<text>return</text>
 			<text> </text>
-			<var>$return</var>
+			<var>$status</var>
 		</line>
 		<line linenr="006" indent="" />
 	</sourcetext>
 	<codearray>
 		<sval type="array" size="10">
-			<sval type="string" val="tv.get.global.tasks" />
+			<sval type="string" val="tv.cmd.move.range.scanner" />
 			<sval type="int" val="50" />
 			<sval type="string" val="" />
 			<sval type="int" val="1" />
 			<sval type="int" val="0" />
-			<sval type="array" size="1">
-				<sval type="string" val="return" />
+			<sval type="array" size="3">
+				<sval type="string" val="target" />
+				<sval type="string" val="range.scanner" />
+				<sval type="string" val="status" />
 			</sval>
-			<sval type="array" size="2">
-				<sval type="array" size="8">
-					<sval type="int" val="102" />
-					<sval type="string" val="tv.get.global" />
-					<sval type="int" val="0" />
+			<sval type="array" size="3">
+				<sval type="array" size="4">
+					<sval type="int" val="1149" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />
 					<sval type="int" val="1" />
-					<sval type="int" val="5" />
-					<sval type="string" val="tv.tasks" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="tv.cmd.move.range" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
 				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="103" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
+					<sval type="int" val="2" />
 				</sval>
 			</sval>
-			<sval type="int" val="0" />
-			<sval type="array" size="4">
-				<sval type="array" size="3">
-					<sval type="int" val="0" />
-					<sval type="int" val="1" />
-					<sval type="string" val="Returns the contents pointed to by 'tv.tasks'." />
-				</sval>
+			<sval type="array" size="1">
 				<sval type="array" size="2">
-					<sval type="int" val="0" />
-					<sval type="int" val="2" />
+					<sval type="int" val="22" />
+					<sval type="string" val="" />
 				</sval>
+			</sval>
+			<sval type="array" size="3">
 				<sval type="array" size="2">
 					<sval type="int" val="1" />
 					<sval type="int" val="2" />
 				</sval>
 				<sval type="array" size="2">
 					<sval type="int" val="2" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="3" />
 					<sval type="int" val="2" />
 				</sval>
 			</sval>

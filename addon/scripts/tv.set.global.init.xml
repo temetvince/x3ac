@@ -222,7 +222,7 @@
 			<text>if</text>
 			<text> </text>
 			<text>not</text>
-			<text>  </text>
+			<text> </text>
 			<var>$value</var>
 		</line>
 		<line linenr="033" indent="&#160;">

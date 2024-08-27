@@ -21,7 +21,7 @@
 			<text> </text>
 			<text>script</text>
 			<text> </text>
-			<call>tv.get.player.sector</call>
+			<call>tv.get.sector.player</call>
 			<text> </text>
 			<text>:</text>
 		</line>
@@ -275,6 +275,7 @@
 			<text>script</text>
 			<text> </text>
 			<call>tv.get.random.sector</call>
+			<text> </text>
 			<text>:</text>
 			<text> </text>
 			<text>max.jumps</text>
@@ -284,7 +285,6 @@
 			<text>known.only</text>
 			<text>=</text>
 			<var>[FALSE]</var>
-			<text> </text>
 		</line>
 		<line linenr="054" indent="&#160;">
 			<var>$sat</var>
@@ -2776,7 +2776,7 @@
 			<sval type="array" size="231">
 				<sval type="array" size="6">
 					<sval type="int" val="102" />
-					<sval type="string" val="tv.get.player.sector" />
+					<sval type="string" val="tv.get.sector.player" />
 					<sval type="int" val="-2147483647" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />

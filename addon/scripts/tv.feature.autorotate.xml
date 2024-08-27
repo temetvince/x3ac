@@ -47,7 +47,7 @@
 			<var>0</var>
 		</line>
 		<line linenr="009" indent="" />
-		<line linenr="010" indent="">
+		<line linenr="010" indent="" interruptable="@">
 			<var>$sector.starting</var>
 			<text> </text>
 			<text>=</text>
@@ -55,9 +55,13 @@
 			<var>[THIS]</var>
 			<text>-&gt;</text>
 			<text> </text>
-			<text>get</text>
+			<text>call</text>
 			<text> </text>
-			<text>sector</text>
+			<text>script</text>
+			<text> </text>
+			<call>tv.get.sector</call>
+			<text> </text>
+			<text>:</text>
 		</line>
 		<line linenr="011" indent="" />
 		<line linenr="012" indent="">
@@ -77,11 +81,11 @@
 			<text> </text>
 			<text>script</text>
 			<text> </text>
-			<call>tv.get.player.sector</call>
+			<call>tv.get.sector.player</call>
 			<text> </text>
 			<text>:</text>
 		</line>
-		<line linenr="014" indent="&#160;">
+		<line linenr="014" indent="&#160;" interruptable="@">
 			<var>$sector</var>
 			<text> </text>
 			<text>=</text>
@@ -89,9 +93,13 @@
 			<var>[THIS]</var>
 			<text>-&gt;</text>
 			<text> </text>
-			<text>get</text>
+			<text>call</text>
 			<text> </text>
-			<text>sector</text>
+			<text>script</text>
+			<text> </text>
+			<call>tv.get.sector</call>
+			<text> </text>
+			<text>:</text>
 		</line>
 		<line linenr="015" indent="&#160;" />
 		<line linenr="016" indent="&#160;">
@@ -537,11 +545,13 @@
 					<sval type="int" val="1" />
 					<sval type="int" val="-1" />
 				</sval>
-				<sval type="array" size="4">
-					<sval type="int" val="703" />
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="tv.get.sector" />
+					<sval type="int" val="4" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />
-					<sval type="int" val="4" />
+					<sval type="int" val="0" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
@@ -554,17 +564,19 @@
 				</sval>
 				<sval type="array" size="6">
 					<sval type="int" val="102" />
-					<sval type="string" val="tv.get.player.sector" />
+					<sval type="string" val="tv.get.sector.player" />
 					<sval type="int" val="5" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />
 					<sval type="int" val="0" />
 				</sval>
-				<sval type="array" size="4">
-					<sval type="int" val="703" />
+				<sval type="array" size="6">
+					<sval type="int" val="102" />
+					<sval type="string" val="tv.get.sector" />
+					<sval type="int" val="6" />
 					<sval type="int" val="131075" />
 					<sval type="int" val="1" />
-					<sval type="int" val="6" />
+					<sval type="int" val="0" />
 				</sval>
 				<sval type="array" size="13">
 					<sval type="int" val="104" />
